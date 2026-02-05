@@ -2,12 +2,11 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[show update destroy]
 
   # GET /users
-  def index
-    @users = User.all
-
-    render json: @users
-  end
-
+def index
+  puts "🎯 LIVE RELOAD TEST: UsersController#index called at #{Time.now}"
+  @users = User.all
+  render :index
+end
   # GET /users/1
   def show
     render json: @user
@@ -42,7 +41,7 @@ class UsersController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_user
-    @user = User.find(params.expect(:id))
+    @user = User.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
