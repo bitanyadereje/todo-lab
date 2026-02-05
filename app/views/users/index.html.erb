@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Users Index</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #222;
+      border-bottom: 3px solid #4A90E2;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #444;
+    }
+    .highlight {
+      background-color: #f8f9fa;
+      border-left: 5px solid #4A90E2;
+      padding: 15px;
+      margin: 20px 0;
+      font-family: monospace;
+      color: #222;
+    }
+    .code {
+      background: #f1f3f4;
+      color: #d14;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<!-- Add at the top of app/views/users/index.html.erb -->
+<div class="alert alert-success">
+  ✅ Live Reload Working! Controller edited at: <%= Time.now %>
+</div>
+  <div class="container">
+    <h1>📦 Docker Lab — Live Reload Test</h1>
+    
+    <p>This page is served from a <strong>Docker container</strong> running a Rails app.</p>
+    
+    <div class="highlight">
+      <strong>Exercise 1.1:</strong> Edit <span class="code">app/controllers/users_controller.rb</span> or this view file, save, and refresh — changes appear instantly without restarting the container.
+    </div>
+    
+    <p>This demonstrates <strong>DevOps rapid iteration</strong> using containerized development environments.</p>
+    
+    <h2>📝 Sample Users List</h2>
+    <ul>
+      <li>👤 User 1 — Admin</li>
+      <li>👤 User 2 — Developer</li>
+      <li>👤 User 3 — Tester</li>
+    </ul>
+    
+    <footer>
+      Session 1: Docker Basics | Rails 8.0.2 | Ruby 3.4.2
+    </footer>
+  </div>
+</body>
+</html>

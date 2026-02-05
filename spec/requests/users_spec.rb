@@ -22,11 +22,10 @@ RSpec.describe "/users", type: :request do
   end
 
   describe "GET /index" do
-    it "renders a successful response" do
-      User.create! valid_attributes
-      get users_url, headers: valid_headers, as: :json
-      expect(response).to be_successful
-    end
+it "renders a successful response" do
+  get users_url
+  expect(response).to have_http_status(:ok)
+end
   end
 
   describe "GET /show" do

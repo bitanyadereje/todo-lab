@@ -1,4 +1,4 @@
-﻿# spec/exercise_demo_spec.rb
+# spec/exercise_demo_spec.rb
 require "spec_helper"
 
 RSpec.describe "Docker Lab Exercise 1.2 - FIXED" do
